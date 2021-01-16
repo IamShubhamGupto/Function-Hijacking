@@ -1,5 +1,5 @@
 # Function-Hijacking
-Implementation of hijacking ```malloc``` and ```free``` functions of stdlib.h in C
+Implementation of hijacking ```malloc``` and ```free``` functions of stdlib.h in C. The concept of function hijacking is taught in the course Design Patterns by Prof. NSK, PES University.
 
 ## Idea
 Replace the inbuilt ```malloc``` and ```free``` functions of ```stdlib.h``` without modifying the file (no write permissions) with my own implementations of the functions namely ```my_malloc``` and ```my_free  ``` during compile time.
@@ -39,7 +39,7 @@ As seen the object file now references to ```my_malloc``` and ```my_free``` with
 ```gcc -c fake_server.c``` creates an object file for modified functions
 - ```gcc client.o fake_server.o``` links both object files and creates an executable
 - ```./a.out``` executes the program
-- As demonstrated, the functions ```malloc``` and ```free``` are now hijacked by ```my_malloc``` and ```my_free``` without actually modifying the client.c
+- As demonstrated, the functions ```malloc``` and ```free``` are now hijacked by ```my_malloc``` and ```my_free``` without actually modifying the client.c.  
 ![Non Hack output](images/a2.jpg)
 
 ### Use case
