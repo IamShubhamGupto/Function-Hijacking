@@ -34,7 +34,7 @@ gcc client.o fake_server.o
 ### Explaination
 - ```gcc -c -Dmalloc=my_malloc -Dfree=my_free client.c``` creates an object file of client.c. The additional ```D``` flag replaces tokens specified during object creation time.
 - ```nm client.o``` lets the user see the functions defined in the object file. 
-![nm command output](images/nm2.jpg)
+![nm command output](images/nm2.jpg)  
 As seen the object file now references to ```my_malloc``` and ```my_free``` without actually modifying the client.c
 ```gcc -c fake_server.c``` creates an object file for modified functions
 - ```gcc client.o fake_server.o``` links both object files and creates an executable
