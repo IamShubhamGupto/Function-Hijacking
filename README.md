@@ -22,7 +22,7 @@ As seen the object file now references to ```malloc``` and ```free``` along with
 - As noticed the default ```malloc``` and ```free``` functions are executed.
 ![Non Hack output](images/a1.jpg)
 
-## Function Hacking
+## Function Hijacking
 ### Commands
 ```sh
 gcc -c -Dmalloc=my_malloc -Dfree=my_free client.c
