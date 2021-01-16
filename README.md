@@ -36,7 +36,7 @@ gcc client.o fake_server.o
 - ```nm client.o``` lets the user see the functions defined in the object file. 
 ![nm command output](images/nm2.jpg)  
 As seen the object file now references to ```my_malloc``` and ```my_free``` without actually modifying the client.c
-```gcc -c fake_server.c``` creates an object file for modified functions
+- ```gcc -c fake_server.c``` creates an object file for modified functions
 - ```gcc client.o fake_server.o``` links both object files and creates an executable
 - ```./a.out``` executes the program
 - As demonstrated, the functions ```malloc``` and ```free``` are now hijacked by ```my_malloc``` and ```my_free``` without actually modifying the client.c.  
